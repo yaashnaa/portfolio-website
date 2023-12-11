@@ -92,7 +92,7 @@ function Projects() {
             </div>
           </div>
 
-          <div className="web-project" data-aos="fade-left">
+          <div className="web-project" data-aos="fade-right">
             <div className="project-content">
               <div className="project-content">
                 <div className="tech">

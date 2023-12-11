@@ -1,10 +1,25 @@
 // server.js
+import { initializeApp } from "firebase/app";
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+// Import the functions you need from the SDKs you need
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDle7XZ7M461572UhqqFJZxkrlki3Q7IOs",
+  authDomain: "portfolio-9c894.firebaseapp.com",
+  projectId: "portfolio-9c894",
+  storageBucket: "portfolio-9c894.appspot.com",
+  messagingSenderId: "84498765441",
+  appId: "1:84498765441:web:be32c9cf178e5d68701f80"
+};
+
+// Initialize Firebase
+const firebase = initializeApp(firebaseConfig);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
