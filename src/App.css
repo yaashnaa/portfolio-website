@@ -44,6 +44,10 @@ body {
 
 }
 
+.navbar a:hover{
+  color: white;
+}
+
 .nav-btn {
   color: var(--primary);
   cursor: pointer;
@@ -73,7 +77,7 @@ img {
     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
       0 0 0.125em hsla(320, 100%, 60%, 0.5),
       -1em -0.125em 0.5em hsla(40, 100%, 60%, 0.5),
-      1em 0.125em 0.5em hsla(200, 100%, 60%, 0.7);
+      1em 0.125em 0.5em hsla(174, 100%, 60%, 0.7);
   }
 
   30% {
@@ -81,7 +85,7 @@ img {
     text-shadow: 0 0 1em hsla(320, 100%, 50%, 075),
       0 0 0.125em hsla(284, 100%, 41%, 0.7),
       -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.7),
-      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.8);
+      0.5em 0.125em 0.25em hsla(176, 100%, 60%, 0.8);
   }
 
   40% {
@@ -89,7 +93,7 @@ img {
     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.7),
       0 0 0.125em hsla(320, 100%, 90%, 0.8),
       -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.7),
-      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.8);
+      0.25em 0.125em 0.125em hsla(172, 100%, 60%, 0.8);
   }
 
   70% {
@@ -97,7 +101,7 @@ img {
     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.8),
       0 0 0.125em hsla(320, 100%, 60%, 0.5),
       0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.7),
-      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.8);
+      -0.5em 0.125em 0.25em hsla(167, 100%, 60%, 0.8);
   }
 
   100% {
@@ -105,7 +109,7 @@ img {
     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
       0 0 0.125em hsla(320, 100%, 60%, 0.5),
       1em -0.125em 0.5em hsla(40, 100%, 60%, 0.7),
-      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0.6);
+      -1em 0.125em 0.5em hsla(169, 100%, 60%, 0.8);
   }
 }
 
@@ -127,13 +131,14 @@ img {
   color: var(--secondary);
   font-size: 0.5rem;
   font-family: "Great Vibes", cursive;
+  
 }
 
 .main-heading-title {
-  font-size: 9.5rem;
+  font-size: 11.5rem;
   color: black;
   font-family: "Great Vibes", cursive;
-  animation: lights 5s 750ms linear infinite;
+  animation: lights 3s 750ms linear infinite;
 }
 
 
@@ -546,7 +551,7 @@ svg text {
   stroke-width: 2;
   stroke: var(--accent);
   color: white;
-  font-size: 7rem;
+  /* font-size: 7rem; */
 }
 @keyframes stroke {
   0% {
@@ -1001,6 +1006,7 @@ textarea {
 }
 
 .link a:hover {
+  color: white;
   box-shadow: inset 200px 0 0 0 #54b3d6; /* Adjust the inset value to increase the box width */
   color: white;
 }
@@ -1340,7 +1346,7 @@ h3::before {
   display: flex;
   gap: 2rem;
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1470,4 +1476,8 @@ h3::before {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+}
+
+.navbar:hover{
+  color: white;
 }

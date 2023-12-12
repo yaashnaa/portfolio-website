@@ -93,8 +93,19 @@ function Projects() {
           </div>
 
           <div className="web-project" data-aos="fade-right">
+          <div className="project-img">
+              <img src={Bloghub} />
+              <div className="image-hover">
+                {" "}
+                <a href="/" style={{ color: "white", textDecoration: "none" }}>
+                  Go to website{" "}
+                </a>
+              </div>
+            </div>
             <div className="project-content">
+              
               <div className="project-content">
+                
                 <div className="tech">
                   <div className="button-21"> Express </div>
                   <div className="button-21"> EJS </div>
@@ -116,15 +127,7 @@ function Projects() {
                 </div>
               </div>
             </div>
-            <div className="project-img">
-              <img src={Bloghub} />
-              <div className="image-hover">
-                {" "}
-                <a href="/" style={{ color: "white", textDecoration: "none" }}>
-                  Go to website{" "}
-                </a>
-              </div>
-            </div>
+      
           </div>
 
           <div className="web-project" data-aos="fade-left">

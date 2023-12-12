@@ -142,7 +142,7 @@ const ContactForm = () => {
                 />
               </a>
               <a
-                href="https://github.com/yg2348"
+                href="https://drive.google.com/file/d/19fdjmJTiLdouylxjFgCNV1AmufeNcoRf/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

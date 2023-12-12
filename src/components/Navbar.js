@@ -69,7 +69,7 @@ const Navbar = () => {
           >
             <div className="nav-btn"> Projects</div>
           </Link>
-          <div className="nav-btn">Resume</div>
+          <a href="https://drive.google.com/file/d/19fdjmJTiLdouylxjFgCNV1AmufeNcoRf/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}><div className="nav-btn"> Resume</div> </a>
           <Link
             activeClass="active"
             to="contact-form"
