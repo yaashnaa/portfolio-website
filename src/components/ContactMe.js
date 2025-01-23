@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
-import Avatar from "../public/avatar.gif";
+import Avatar from "../public/assets/avatar.gif";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
+import emailjs from "@emailjs/browser";
+
 import {
   faLinkedin,
   faGithub,
@@ -13,28 +15,33 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [status, setStatus] = useState("");
+  const form = useRef();
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      await axios.post("/api/send-email", formData);
-      alert("Email sent successfully!");
-    } catch (error) {
-      console.error("Error sending email:", error);
-      alert("Error sending email. Please try again later.");
-    }
-  };
+    emailjs
+      .sendForm(
+        'service_vfhjlfq',
+        'template_bjd1ys6',
+        form.current,
+        'xb23kWtrN2m00CfkR'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message Sent Successfully!");
+          setStatus("Message Sent Successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus("Something went wrong. Please try again.");
+        }
+      );
 
+    e.target.reset();
+  };
   const addClass = () => {
     document.body.classList.add("sent");
   };
@@ -55,13 +62,13 @@ const ContactForm = () => {
               <div className="underline"></div>
             </svg>
           </div> */}
-            <form action="#" method="post" id="contact_form">
+            <form ref={form} onSubmit={handleOnSubmit} id="contact_form">
               <div className="name">
                 <label for="name"></label>
                 <input
                   type="text"
                   placeholder="My name is"
-                  name="name"
+                  name="from_name"
                   id="name_input"
                   required
                 />
@@ -115,9 +122,7 @@ const ContactForm = () => {
               </div>
               <div className="submit">
                 <input type="submit" value="Send Message" id="form_button" />
-              </div>
-            </form>
-            <div className="icons">
+                <div className="icons">
               <a
                 href="https://www.linkedin.com/in/yaashna-gupta-a78473237"
                 target="_blank"
@@ -165,6 +170,9 @@ const ContactForm = () => {
                 />
               </a>
             </div>
+              </div>
+            </form>
+          
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import AboutMe from "../public/aboutme.jpg";
+import AboutMe from "../public/assets/aboutme.jpg";
 import simpleParallax from "simple-parallax-js";
 
 const MiniAboutMe = () => {
@@ -22,7 +22,7 @@ const MiniAboutMe = () => {
         data-aos-duration="2000"
         data-aos-delay="300"
       >
-        <div class="card" data-aos="fade-right">
+        <div className="card" data-aos="fade-right">
           {" "}
           <img src={AboutMe} className="circular-img" />{" "}
           <span className="top"></span>
@@ -32,9 +32,9 @@ const MiniAboutMe = () => {
         </div>
 
         <div className="aboutme-content">
-          <div class="container projects">
+          <div className="container projects">
             <h2>So, who am I really?</h2>
-            <div class="overlay"></div>
+            <div className="overlay"></div>
           </div>
           <div className="about-me" data-aos="fade-left">
             I've always loved creating, whether it was art or poetry or

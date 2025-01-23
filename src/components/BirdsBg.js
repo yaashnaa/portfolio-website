@@ -4,7 +4,7 @@ import { BIRDS } from 'vanta/dist/vanta.birds.min';
 import MiniAboutMe from './MiniAboutMe';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import AboutMe from "../public/aboutme.jpg";
+import AboutMe from "../public/assets/aboutme.jpg";
 
 const BirdsBg = () => {
   const vantaRef = useRef(null);

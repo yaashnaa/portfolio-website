@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Logo from "../public/logo.png";
+import Logo from "../public/assets/logo.png";
 import { Link } from "react-scroll";
 import { motion, useAnimation } from "framer-motion";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -34,21 +34,18 @@ const Navbar = () => {
 
       <div className="navbar" data-aos="fade-down">
         <div className="navbar-left">
- 
           <div className="nav-btn">
             <img className="logo" src={Logo} alt="logo" />
           </div>
         </div>
         <div className="icon-font">
-          
           <FontAwesomeIcon
-                 icon={faBars}
-                 size="sm"
-                 style={{ color: "#ffffff" }}
-               />
-               </div>
+            icon={faBars}
+            size="sm"
+            style={{ color: "#ffffff" }}
+          />
+        </div>
         <div className="navbar-right">
-     
           <Link
             activeClass="active"
             to="aboutme-main"
@@ -69,7 +66,14 @@ const Navbar = () => {
           >
             <div className="nav-btn"> Projects</div>
           </Link>
-          <a href="https://drive.google.com/file/d/19fdjmJTiLdouylxjFgCNV1AmufeNcoRf/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}><div className="nav-btn"> Resume</div> </a>
+          <a
+            href="https://drive.google.com/file/d/15kIDlGY1DMvGgqlaD-bDwHigcbDVJdfx/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <div className="nav-btn"> Resume</div>{" "}
+          </a>
           <Link
             activeClass="active"
             to="contact-form"

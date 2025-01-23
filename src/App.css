@@ -19,18 +19,21 @@
   --primary: rgb(217, 164, 161);
   --secondary: rgb(17, 8, 10);
   --accent: rgb(28, 203, 212);
-
 }
 
-
+html {
+  font-size: 16px;
+  margin: 0;
+}
 
 body {
   background-color: var(--background);
   color: white;
+  margin: 0;
 }
 
 .navbar {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -41,10 +44,9 @@ body {
   font-size: 3rem;
   font-family: "Tangerine", cursive;
   font-weight: 700;
-
 }
 
-.navbar a:hover{
+.navbar a:hover {
   color: white;
 }
 
@@ -66,10 +68,6 @@ img {
   height: 100%;
   width: 100%;
 }
-
-
-
-
 
 @keyframes lights {
   0% {
@@ -113,7 +111,6 @@ img {
   }
 }
 
-
 .hb-text {
   font-size: 4rem;
   color: var(--text);
@@ -131,17 +128,14 @@ img {
   color: var(--secondary);
   font-size: 0.5rem;
   font-family: "Great Vibes", cursive;
-  
 }
 
 .main-heading-title {
-  font-size: 11.5rem;
+  font-size: 9rem;
   color: black;
   font-family: "Great Vibes", cursive;
   animation: lights 3s 750ms linear infinite;
 }
-
-
 
 .main-div {
   display: flex;
@@ -162,9 +156,9 @@ img {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-family: "Alegreya Sans SC", sans-serif;
- 
+
   font-weight: 700;
   width: 70%;
   margin-left: 2rem;
@@ -200,7 +194,7 @@ h1 {
 
 .typed-out:nth-child(2) {
   animation: typing 3s steps(50, end) forwards, blinking 1.2s infinite;
-  animation-delay: 3s; 
+  animation-delay: 3s;
 }
 
 @keyframes typing {
@@ -221,18 +215,19 @@ h1 {
 .img-div {
   z-index: 999999;
   height: 60%;
- 
+
   position: absolute;
   top: 50%;
   left: 67%;
   transform: translate(-50%, -50%);
   border: 10px solid rgb(28, 203, 212, 0.4);
   outline-offset: 20px;
-
+  margin: 1rem;
 }
 
 .logo {
-
+  /* margin: 0; */
+  /* margin: 0.7rem; */
   width: 5.5rem;
 }
 
@@ -248,13 +243,11 @@ h1 {
   display: flex;
 }
 
-
 .skill-title:hover + .images {
   display: block;
 }
 
 .skills-div {
-
   width: 70%;
   position: relative;
   justify-content: center;
@@ -456,6 +449,22 @@ h1 {
   gap: 5rem;
   align-items: center; /* Center the content horizontally */
 }
+.creative-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  width: 70%;
+  margin: auto;
+  align-items: center; /* Center the content horizontally */
+}
+
+.creative-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
 
 .web-project {
   display: flex;
@@ -501,7 +510,7 @@ h1 {
   /* display: inline-block; */
   color: white;
   font-family: "Great vibes", cursive;
-  font-size: 12rem;
+  font-size: 10rem;
   text-align: center;
   margin: 5rem;
   text-shadow: 0.03em 0.03em 0 rgb(28, 203, 212, 1);
@@ -551,8 +560,16 @@ svg text {
   stroke-width: 2;
   stroke: var(--accent);
   color: white;
-  /* font-size: 7rem; */
+  /* font-size: 5rem; */
 }
+
+.project-header {
+  display: flex;
+  justify-content: space-around;
+  /* font-size: 5rem; */
+  align-items: center;
+}
+
 @keyframes stroke {
   0% {
     fill: rgba(217, 164, 161, 0);
@@ -689,7 +706,7 @@ p {
   justify-content: center;
   align-items: center;
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: white;
   text-decoration: none;
 }
@@ -748,7 +765,7 @@ textarea {
 #container {
   border: solid 3px #474544;
   width: 60%;
-  height: 80%;
+  height: 100%;
   padding: 2rem;
   color: white;
   /* margin: 2rem; */
@@ -930,6 +947,9 @@ textarea {
 }
 
 @media screen and (max-width: 480px) {
+  .main-heading-title {
+    font-size: 4rem;
+  }
   h1 {
     font-size: 26px;
   }
@@ -1345,10 +1365,12 @@ h3::before {
 .icons {
   display: flex;
   gap: 2rem;
-  position: absolute;
-  bottom: 10%;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute;
+  bottom: 15%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .custom-cursor {
@@ -1415,14 +1437,202 @@ h3::before {
   margin-bottom: 2rem;
 }
 
-.icon-font{
+.icon-font {
   display: none;
-
 }
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
   .navbar {
-    /* background-color: #cd921e; */
+    background-color: #cd921e;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 2rem;
+  }
+
+  .arrow-icon {
+    font-size: 2rem;
+  }
+  .img-div {
+    height: 30%;
+    width: 25%;
+  }
+  .logo {
+    width: 3rem;
+  }
+
+  .main-div {
+    height: 80vh;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+  .main-heading-title {
+    font-size: 3rem;
+    width: 80%;
+  }
+  .main-heading {
+    margin: 0;
+    width: 80%;
+    left: 50%;
+  }
+  h1 {
+    font-size: 18px;
+    margin-left: 0;
+  }
+  .icon-font {
+    display: block;
+    display: flex;
+    margin-right: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-me {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .card img {
+    width: 200px;
+  }
+
+  .container {
+    width: 70vw;
+  }
+
+  .project-desc {
+    font-size: 1.2rem;
+  }
+  .main-heading-title {
+    font-size: 2rem;
+  }
+
+  .projects-web,
+  .projects-creative {
+    padding: 0 5px;
+  }
+
+  .web-project,
+  .creative-project {
+    flex: 1 1 100%;
+  }
+} */
+
+
+/* Media Query for Phones (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+  /* General font size adjustment */
+  html {
+    font-size: 12px; /* Scale down the font size for smaller screens */
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .navbar-right {
+    display: none; /* Hide extra navbar items */
+  }
+
+  /* Main Heading */
+  .main-heading-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  /* Hero Section */
+  .img-herobanner {
+    height: auto;
+    margin-top: 5rem;
+    max-width: 100%;
+  }
+
+  /* Projects Section */
+  .projects-web,
+  .projects-creative {
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .web-flex,
+  .creative-flex {
+    flex-direction: column; /* Stack the projects vertically */
+    gap: 2rem;
+  }
+
+  .web-project,
+  .creative-project {
+    flex: 1 1 100%; /* Ensure projects take full width */
+    margin: 0 auto;
+  }
+
+  /* Images */
+  .project-img {
+    max-width: 100%; /* Ensure images scale to fit the screen */
+    height: auto;
+  }
+  /* .circular-img{
+    width: 0;
+  } */
+
+  .card{
+    display: none;
+  }
+  .about-me{
+    font-size: 1.4rem;
+  }
+  h2{
+    font-size: 3rem;
+  }
+  /* Text adjustments */
+  .project-desc {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .project-heading{
+    font-size: 13rem;
+  }
+
+  .project-heading-inside {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Navigation Arrows */
+  .arrow-icon {
+    font-size: 2rem; /* Smaller icons for phones */
+  }
+  svg text{
+    animation: none;
+  }
+
+  /* General Buttons */
+  .button-30 {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+  }
+}
+
+
+
+
+
+/* @media only screen and (min-width: 600px) {
+  html{
+    font-size: 8px;
+  }
+  .navbar {
+    background-color: #cd921e;
   }
 
   .img-div{
@@ -1444,6 +1654,10 @@ h3::before {
     font-size: 3rem;
     width: 80%;
   }
+
+  .aboutme-main{
+    margin: 2rem;
+  }
 .main-heading{
   margin: 0;
   width: 80%;
@@ -1460,14 +1674,44 @@ h3::before {
     align-items: center;
     justify-content: center;
   }
-}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
+  .about-me{
+    font-size: 1.2rem;
+  }
+  h2{
+    font-size: 2.5rem;
+  }
+
+  .card img{
+    width: 200px;
+  }
+
+  .container{
+    width: 70vw;
+  }
+
+  .project-desc{
+    font-size: 1.2rem;
+  }
+
+  .project-content{
+    padding: 0;
+    width: 70vw;
+  }
+
+  .project-img{
+    width: 10rem;
+  }
+} */
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  /* .main-heading-title {
+    font-size: 7rem;
+  } */
+  /* h1{
+    font-size: 2rem;
+  } */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1478,6 +1722,36 @@ h3::before {
 @media only screen and (min-width: 1200px) {
 }
 
-.navbar:hover{
+.navbar:hover {
   color: white;
+}
+
+.links-1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.navigation-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.arrow-icon {
+  font-size: 5rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-icon:hover {
+  color: var(--primary);
 }

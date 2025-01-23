@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import New from "../public/new.png";
+import New from "../public/assets/new.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
