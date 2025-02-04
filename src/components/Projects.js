@@ -20,7 +20,6 @@ import { color } from "framer-motion";
 function Projects() {
   const [currentSection, setCurrentSection] = React.useState("webdev");
 
-
   const handleNextSection = () => {
     // Switch to "creative" if current is "webdev", else go back to "webdev"
     setCurrentSection((prev) => (prev === "webdev" ? "creative" : "webdev"));
@@ -113,17 +112,48 @@ function Projects() {
                 </div>
               </div>
             </div>
+            <hr class="gradient"></hr>
             <div className="web-project" data-aos="fade-left">
               <div className="project-content">
                 <div className="project-content">
-                  <div className="tech">
+                  <div className="tech" id="tech">
                     <div className="button-21"> Express </div>
                     <div className="button-21"> EJS </div>
                     <div className="button-21"> Nedb </div>
                     <div className="button-21"> WebRTC </div>
                     <div className="button-21"> Peer.js</div>
                   </div>
-
+                  <div className="project-img-mobile">
+                    <img src={StudyHub} />
+                    <div className="image-hover">
+                      {" "}
+                      <div className="links-1">
+                        <a
+                          href="https://adaptive-carnelian-lobe.glitch.me/"
+                          style={{ color: "white", textDecoration: "none" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Go to website{" "}
+                        </a>
+                        <a
+                          href="https://github.com/yaashnaa/StudyCenter.git"
+                          style={{ color: "white", textDecoration: "none" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Github repository{" "}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="tech-mobile">
+                    <div className="button-21"> Express </div>
+                    <div className="button-21"> EJS </div>
+                    <div className="button-21"> Nedb </div>
+                    <div className="button-21"> WebRTC </div>
+                    <div className="button-21"> Peer.js</div>
+                  </div>
                   <div className="project-heading-inside"> StudyCenter</div>
                   <div className="project-desc">
                     A dynamic platform that facilitates collaborative studying,
@@ -138,7 +168,7 @@ function Projects() {
                   </div>
                 </div>
               </div>
-              <div className="project-img">
+              <div className="project-img" id="project-img">
                 <img src={StudyHub} />
                 <div className="image-hover">
                   {" "}
@@ -216,6 +246,38 @@ function Projects() {
 
             <div className="web-project" data-aos="fade-left">
               <div className="project-content">
+                <div className="project-img-mobile">
+                  <img src={ChatApp} />
+                  <div className="image-hover">
+                    {" "}
+                    <div className="links-1">
+                      <a
+                        href="https://sixth-field-fascinator.glitch.me/"
+                        style={{ color: "white", textDecoration: "none" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Go to website{" "}
+                      </a>
+                      <a
+                        href="https://github.com/yaashnaa/MusicConnect.git"
+                        style={{ color: "white", textDecoration: "none" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Github repository
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="tech-mobile">
+                  <div className="button-21"> React </div>
+                  <div className="button-21"> Express </div>
+                  <div className="button-21"> Socket.io </div>
+                  <div className="button-21"> WebRTC </div>
+                  <div className="button-21"> SimplePeer</div>
+                  <div className="button-21"> CodeMirror</div>
+                </div>
                 <div className="tech">
                   <div className="button-21"> React </div>
                   <div className="button-21"> Express </div>
@@ -224,7 +286,6 @@ function Projects() {
                   <div className="button-21"> SimplePeer</div>
                   <div className="button-21"> CodeMirror</div>
                 </div>
-
                 <div className="project-heading-inside"> MusicConnect</div>
                 <div className="project-desc">
                   Experience the unique blend of communication and music sharing
@@ -237,7 +298,7 @@ function Projects() {
                   ensures a smooth and enjoyable user experience.
                 </div>
               </div>
-              <div className="project-img">
+              <div className="project-img" id="project-img">
                 <img src={ChatApp} />
                 <div className="image-hover">
                   {" "}
@@ -309,7 +370,39 @@ function Projects() {
             </div>
             <div className="web-project" data-aos="fade-left">
               <div className="project-content">
-                <div className="tech">
+                <div className="tech" id="tech">
+                  <div className="button-21"> EJS </div>
+                  <div className="button-21"> Express </div>
+                  <div className="button-21"> ML5.js </div>
+                  <div className="button-21"> Handpose </div>
+                  <div className="button-21"> Facemesh </div>
+                  <div className="button-21"> P5.js </div>
+                </div>
+                <div className="project-img-mobile">
+                  <img src={Respiro} />
+                  <div className="image-hover">
+                    <div className="links-1">
+                      <a
+                        href="https://yaashnaa.github.io/midterm-liveweb-final/"
+                        style={{ color: "white", textDecoration: "none" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Go to website{" "}
+                      </a>
+                      <a
+                        href="https://github.com/yaashnaa/Respiro.git"
+                        style={{ color: "white", textDecoration: "none" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Github repository
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="tech-mobile">
                   <div className="button-21"> EJS </div>
                   <div className="button-21"> Express </div>
                   <div className="button-21"> ML5.js </div>
@@ -332,7 +425,7 @@ function Projects() {
                   features powered by the p5.speech library.
                 </div>
               </div>
-              <div className="project-img">
+              <div className="project-img" id="project-img">
                 <img src={Respiro} />
                 <div className="image-hover">
                   <div className="links-1">
@@ -416,37 +509,46 @@ function Projects() {
                 3D Printed Moon Lamp
               </div>
               <div className="project-desc">
-                The moon lamp for this project has been thoughtfully created
-                using the innovative technique of 3D printing. The lamp's design
-                was meticulously crafted in Fusion 360, a widely used software
-                known for its precision and versatility. What makes this moon
-                lamp stand out is its internal LED lighting system, which adds a
-                touch of magic to the overall experience. By utilizing a remote
-                control, the lamp allows users to effortlessly change the
-                colors, creating a dynamic and personalized atmosphere.
+                This moon lamp is 3D-printed with a design carefully crafted in
+                Fusion 360 for precision. It features an internal LED lighting
+                system that creates a magical glow. With a remote control, users
+                can easily change colors, setting the perfect ambiance."
               </div>
             </div>
           </div>
           <div className="creative-project" data-aos="fade-right">
             <div className="project-content">
+            <div className="project-img-mobile">
+              <img src={Performance} />
+              <div className="image-hover">
+                {" "}
+                <div className="links-1">
+                  <a
+                    href="https://drive.google.com/drive/folders/1vtF-D3IE8SWd9t0jLkbh7IBlBT2qnbTQ?usp=sharing"
+                    style={{ color: "white", textDecoration: "none" }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Go to documentation
+                  </a>
+                </div>
+              </div>
+            </div>
               <div className="project-heading-inside">
                 {" "}
                 Interactive Motion Performance
               </div>
               <div className="project-desc">
-                Designed and executed an innovative live performance integrating
-                wearable technology and interactive visuals. Utilized Arduino as
-                the primary microcontroller, interfaced with TouchDesigner to
-                create dynamic, real-time visuals. Leveraged accelerometer and
-                gyroscope data from wearable sensors to generate visuals that
-                responded to movement and orientation, creating an immersive
-                audience experience. This project showcased advanced proficiency
-                in wearable technology, real-time visual programming, and
-                creative coding, demonstrating the seamless integration of
-                hardware and software to produce captivating live performances.
+                Designed and executed a live performance integrating wearable
+                technology and interactive visuals. Used Arduino to interface
+                with TouchDesigner, generating real-time visuals from
+                accelerometer and gyroscope data. This project showcased
+                expertise in wearable tech, real-time visual programming, and
+                creative coding, seamlessly blending hardware and software for
+                an immersive experience."
               </div>
             </div>
-            <div className="project-img">
+            <div className="project-img" id="project-img">
               <img src={Performance} />
               <div className="image-hover">
                 {" "}

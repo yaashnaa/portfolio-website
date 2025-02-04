@@ -53,8 +53,13 @@ body {
 .nav-btn {
   color: var(--primary);
   cursor: pointer;
+  font-size: 2.2rem;
+  font-weight: 300;
+  font-family: "Alegreya Sans SC", sans-serif;
 }
-
+.nav-btn:hover {
+  color: white;
+}
 .img-herobanner {
   flex: 1;
   margin-top: 10rem;
@@ -131,7 +136,7 @@ img {
 }
 
 .main-heading-title {
-  font-size: 9rem;
+  font-size: 10rem;
   color: black;
   font-family: "Great Vibes", cursive;
   animation: lights 3s 750ms linear infinite;
@@ -316,7 +321,9 @@ h1 {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
 }
-
+.tech-mobile {
+  display: none;
+}
 .skill-title {
   display: flex;
   justify-content: space-evenly;
@@ -488,7 +495,8 @@ h1 {
   flex: 1;
   letter-spacing: 0.1rem;
   font-size: 1.5rem;
-  font-family: "Alegreya Sans SC", monospace;
+  font-weight: 300;
+  font-family: "Alegreya Sans", monospace;
 }
 
 .project-heading-inside {
@@ -551,6 +559,7 @@ svg {
   font-family: "Alegreya SC", serif;
   /* font-family: "Alegreya Sans SC", monospace; */
   font-weight: 700;
+  font-size: 13rem;
   /* position: absolute;  */
   /* width: 100%; height: 100%; */
 }
@@ -564,10 +573,11 @@ svg text {
 }
 
 .project-header {
-  display: flex;
-  justify-content: space-around;
-  /* font-size: 5rem; */
   align-items: center;
+  display: flex;
+  width: 70vw;
+  justify-content: center;
+  margin: auto;
 }
 
 @keyframes stroke {
@@ -761,10 +771,16 @@ input {
 textarea {
   overflow: auto;
 }
+input:focus::placeholder {
+  color: transparent;
+}
+.subject:focus {
+  color: transparent;
+}
 
 #container {
   border: solid 3px #474544;
-  width: 60%;
+  width: 100%;
   height: 100%;
   padding: 2rem;
   color: white;
@@ -791,7 +807,7 @@ h2 {
   letter-spacing: 7px;
   text-align: center;
   text-transform: capitalize;
-  font-family: "Great Vibes", cursive;
+
   margin: 1rem;
 }
 
@@ -878,6 +894,11 @@ select::-ms-expand {
   display: none;
 }
 
+.submit {
+  display: flex;
+  gap: 2rem;
+}
+
 .subject {
   width: 100%;
   color: white;
@@ -939,65 +960,19 @@ textarea {
   color: #f2f3eb;
 }
 
-@media screen and (max-width: 768px) {
-  #container {
-    margin: 20px auto;
-    width: 95%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .main-heading-title {
-    font-size: 4rem;
-  }
-  h1 {
-    font-size: 26px;
-  }
-
-  .underline {
-    width: 68px;
-  }
-
-  #form_button {
-    padding: 15px 25px;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  h1 {
-    font-size: 18px;
-  }
-
-  .icon {
-    height: 35px;
-    width: 35px;
-  }
-
-  .underline {
-    width: 53px;
-  }
-
-  input[type="text"],
-  [type="email"],
-  select,
-  textarea {
-    font-size: 1.2rem;
-  }
-}
-
 .contact-form {
-  height: 80vh;
-  width: 100vw;
+  height: 70vh;
+  width: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin: 0;
+  margin: auto;
   /* bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%); */
   /* background-color: var(--primary); */
   position: relative;
+  margin-top: 10rem;
 }
 
 .links {
@@ -1088,17 +1063,20 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 70vw;
+  margin: auto;
 }
 
-.circular-img {
+/* .circular-img {
   width: 400px;
-}
+} */
 
 .about-me {
   margin-top: 2rem;
   color: white;
   font-size: 2rem;
-  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 100;
+  font-family: "Alegreya Sans ", sans-serif;
 }
 
 .aboutme-heading {
@@ -1107,13 +1085,12 @@ textarea {
   font-family: "Alegreya Sans SC", monospace;
 }
 
-.aboutme-content {
-  max-width: 80vh; /* Adjust the max-width as needed */
+.project-img-mobile {
+  display: none;
 }
-
 .card {
   position: relative;
-  width: 400px;
+  /* width: 400px; */
   /* height: 300px; */
   color: #fff;
   background: transparent;
@@ -1396,6 +1373,7 @@ h3::before {
   background-size: calc(100% + 20px) calc(100% + 20px);
   border-radius: 100px;
   border-width: 0;
+  font-weight: 900;
   box-shadow: none;
   box-sizing: border-box;
   color: #ffffff;
@@ -1440,287 +1418,6 @@ h3::before {
 .icon-font {
   display: none;
 }
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {
-  html {
-    font-size: 8px;
-  }
-  .navbar {
-    background-color: #cd921e;
-    flex-direction: column;
-    padding: 10px;
-    font-size: 2rem;
-  }
-
-  .arrow-icon {
-    font-size: 2rem;
-  }
-  .img-div {
-    height: 30%;
-    width: 25%;
-  }
-  .logo {
-    width: 3rem;
-  }
-
-  .main-div {
-    height: 80vh;
-  }
-
-  .navbar-right {
-    display: none;
-  }
-  .main-heading-title {
-    font-size: 3rem;
-    width: 80%;
-  }
-  .main-heading {
-    margin: 0;
-    width: 80%;
-    left: 50%;
-  }
-  h1 {
-    font-size: 18px;
-    margin-left: 0;
-  }
-  .icon-font {
-    display: block;
-    display: flex;
-    margin-right: 2rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .about-me {
-    font-size: 1.2rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  .card img {
-    width: 200px;
-  }
-
-  .container {
-    width: 70vw;
-  }
-
-  .project-desc {
-    font-size: 1.2rem;
-  }
-  .main-heading-title {
-    font-size: 2rem;
-  }
-
-  .projects-web,
-  .projects-creative {
-    padding: 0 5px;
-  }
-
-  .web-project,
-  .creative-project {
-    flex: 1 1 100%;
-  }
-} */
-
-
-/* Media Query for Phones (max-width: 600px) */
-@media only screen and (max-width: 600px) {
-  /* General font size adjustment */
-  html {
-    font-size: 12px; /* Scale down the font size for smaller screens */
-  }
-
-  /* Navbar adjustments */
-  .navbar {
-    flex-direction: column;
-    font-size: 2rem;
-    padding: 10px;
-  }
-
-  .navbar-right {
-    display: none; /* Hide extra navbar items */
-  }
-
-  /* Main Heading */
-  .main-heading-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 1rem;
-  }
-
-  /* Hero Section */
-  .img-herobanner {
-    height: auto;
-    margin-top: 5rem;
-    max-width: 100%;
-  }
-
-  /* Projects Section */
-  .projects-web,
-  .projects-creative {
-    padding: 0 10px;
-    width: 100%;
-  }
-
-  .web-flex,
-  .creative-flex {
-    flex-direction: column; /* Stack the projects vertically */
-    gap: 2rem;
-  }
-
-  .web-project,
-  .creative-project {
-    flex: 1 1 100%; /* Ensure projects take full width */
-    margin: 0 auto;
-  }
-
-  /* Images */
-  .project-img {
-    max-width: 100%; /* Ensure images scale to fit the screen */
-    height: auto;
-  }
-  /* .circular-img{
-    width: 0;
-  } */
-
-  .card{
-    display: none;
-  }
-  .about-me{
-    font-size: 1.4rem;
-  }
-  h2{
-    font-size: 3rem;
-  }
-  /* Text adjustments */
-  .project-desc {
-    font-size: 1rem;
-    text-align: center;
-  }
-  .project-heading{
-    font-size: 13rem;
-  }
-
-  .project-heading-inside {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  /* Navigation Arrows */
-  .arrow-icon {
-    font-size: 2rem; /* Smaller icons for phones */
-  }
-  svg text{
-    animation: none;
-  }
-
-  /* General Buttons */
-  .button-30 {
-    font-size: 1.2rem;
-    padding: 5px 15px;
-  }
-}
-
-
-
-
-
-/* @media only screen and (min-width: 600px) {
-  html{
-    font-size: 8px;
-  }
-  .navbar {
-    background-color: #cd921e;
-  }
-
-  .img-div{
-    height: 30%;
-    width: 25%;
-  }
-  .logo {
-    width: 3rem;
-  }
-
-  .main-div{
-    height: 80vh;
-  }
-
-  .navbar-right {
-    display: none;
-  }
-  .main-heading-title{
-    font-size: 3rem;
-    width: 80%;
-  }
-
-  .aboutme-main{
-    margin: 2rem;
-  }
-.main-heading{
-  margin: 0;
-  width: 80%;
-  left: 50%;
-}
-  h1{
-    font-size: 18px;
-    margin-left: 0;
-  }
-  .icon-font{
-    display: block;
-    display: flex;
-    margin-right: 2rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .about-me{
-    font-size: 1.2rem;
-  }
-  h2{
-    font-size: 2.5rem;
-  }
-
-  .card img{
-    width: 200px;
-  }
-
-  .container{
-    width: 70vw;
-  }
-
-  .project-desc{
-    font-size: 1.2rem;
-  }
-
-  .project-content{
-    padding: 0;
-    width: 70vw;
-  }
-
-  .project-img{
-    width: 10rem;
-  }
-} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  /* .main-heading-title {
-    font-size: 7rem;
-  } */
-  /* h1{
-    font-size: 2rem;
-  } */
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
 
 .navbar:hover {
   color: white;
@@ -1731,7 +1428,7 @@ h3::before {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  gap: 0.2rem;
+  gap: 0.7rem;
 }
 
 .navigation-arrows {
@@ -1755,3 +1452,39 @@ h3::before {
 .arrow-icon:hover {
   color: var(--primary);
 }
+
+.aboutme-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Responsive grid */
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.icon-info {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem;
+  background: var(
+    --background-light,
+    rgba(255, 255, 255, 0.1)
+  ); /* Light background for contrast */
+  border-radius: 8px;
+  cursor: none;
+}
+.aboutme-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.icon-am:hover{
+  color: white;
+}
+

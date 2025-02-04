@@ -1,12 +1,10 @@
 import "./App.css";
+import "./AppMobile.css";
 import ContactForm from "./components/ContactMe";
 import MiniAboutMe from "./components/MiniAboutMe";
 import Navbar from "./components/Navbar";
 import NewHeroBanner from "./components/NewHeroBanner";
 import Projects from "./components/Projects";
-import BirdsBg from "./components/BirdsBg";
-import Skills from "./components/Skills";
-import Slideshow from "./components/Slideshow";
 import AnimatedCursor from "react-animated-cursor";
 // index.js or App.js
 import "@fortawesome/fontawesome-free/css/all.min.css";
