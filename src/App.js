@@ -1,5 +1,5 @@
 import "./App.css";
-import "./AppMobile.css";
+import "./AppMobile.css"
 import ContactForm from "./components/ContactMe";
 import MiniAboutMe from "./components/MiniAboutMe";
 import Navbar from "./components/Navbar";

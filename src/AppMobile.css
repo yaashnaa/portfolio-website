@@ -13,7 +13,7 @@
   }
   .navbar-right.active {
     display: flex;
-    height: 57vh;
+    height: 50vh;
   }
   .aboutme-icons {
     grid-template-columns: 1fr; /* Stack items on small screens */
@@ -328,6 +328,9 @@ cursor {
   h2 {
     font-size: 2.4rem;
   }
+  .project-img{
+    width: 70vw;
+}
   .icon {
     height: 35px;
     width: 35px;
@@ -340,7 +343,7 @@ cursor {
     width: 53px;
   }
   .navbar-right.active {
-    height: 100vh;
+    height: 70vh;
   }
   .navbar-right {
     display: none;
@@ -368,15 +371,22 @@ cursor {
 .about-me{
     font-size: 1.4rem;
 }
+.links-1 a{
+    font-size: 1.5rem;
+}
+
 h2{
     font-size: 3rem;
 }
 .img-div{
-    height: 50%;
+    height: 30%;
 }
 .contact-form{
-    height: 100vh;
+    height: 70vh;
     font-size: 1rem;
+}
+h2{
+    font-size: 2.5rem;
 }
 .icon-info{
     font-size: 1.3rem;
@@ -387,7 +397,9 @@ select,
 textarea {
   font-size: .9rem;
 }
-
+.project-img{
+    width: 60vw;
+}
 }
 @media screen and (min-width: 1024px) and (max-width: 1342) {
 .project-desc{
@@ -508,9 +520,6 @@ textarea {
   .project-desc{
     font-size: 4.4rem;
 }
-  .navbar {
-    background-color: yellow;
-  }
   .img-div {
     height: 40%;
   }
@@ -548,9 +557,6 @@ textarea {
   }
 }
 @media only screen and (min-width: 1910px) {
-    .navbar{
-        background-color: yellow;
-    }
     .project-desc{
         font-size: 2.4rem;
     }
