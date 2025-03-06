@@ -8,15 +8,13 @@ import Bloghub from "../public/assets/bloghub.png";
 import StudyHub from "../public/assets/studyHub.png";
 import MoonLamp from "../public/assets/moonlamp.png";
 import Performance from "../public/assets/performance.png";
+import zenPose from "../public/assets/zenPose.png";
 import Game from "../public/assets/game.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { color } from "framer-motion";
 function Projects() {
   const [currentSection, setCurrentSection] = React.useState("webdev");
 
@@ -66,6 +64,69 @@ function Projects() {
       <div className="projects-web">
         {currentSection === "webdev" && (
           <div className="web-flex">
+            <div className="web-project" data-aos="fade-left">
+              <div className="project-content">
+                <div className="project-content">
+                  <div className="tech" id="tech">
+                    <div className="button-21"> GenAI </div>
+                    <div className="button-21"> React </div>
+                    <div className="button-21"> Python </div>
+                    <div className="button-21"> Axios </div>
+                    <div className="button-21"> Machine Learning</div>
+        
+                  </div>
+                  <div className="project-img-mobile">
+                    <img src={StudyHub} />
+                    <div className="image-hover">
+                      {" "}
+                      <div className="links-1">
+                        <a
+                          href="https://github.com/yaashnaa/hackathon-2025"
+                          style={{ color: "white", textDecoration: "underline" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Github repository{" "}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="tech-mobile">
+                  <div className="button-21"> GenAI </div>
+                    <div className="button-21"> React </div>
+                    <div className="button-21"> Python </div>
+                    <div className="button-21"> Axios </div>
+                    <div className="button-21"> Machine Learning</div>
+                    
+                  </div>
+                  <div className="project-heading-inside"> ZenPose (HACKNYU 2025 WInner)</div>
+                  <div className="project-desc">
+                    Developed a web app that uses real-time pose detection to
+                    provide instant feedback for injury prevention. Improved
+                    detection accuracy by implementing relative pose estimation
+                    and integrated Gemini API for personalized corrections.
+                    Built a responsive UI with React enhancing user experience
+                    and engagement.
+                  </div>
+                </div>
+              </div>
+              <div className="project-img" id="project-img">
+                <img src={zenPose} />
+                <div className="image-hover">
+                  {" "}
+                  <div className="links-1">
+                    <a
+                        href="https://github.com/yaashnaa/hackathon-2025"
+                      style={{ color: "white", textDecoration: "underline" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Github repository{" "}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="web-project" data-aos="fade-right">
               <div className="project-img">
                 <img src={FlexFit} />
@@ -74,7 +135,7 @@ function Projects() {
                   <div className="links-1">
                     <a
                       href="https://auth-fitness-website-react.web.app/"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -83,7 +144,7 @@ function Projects() {
 
                     <a
                       href="https://github.com/yaashnaa/FlexFit.git"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -98,6 +159,7 @@ function Projects() {
                   <div className="button-21"> Firebase </div>
                   <div className="button-21"> Rapid API </div>
                   <div className="button-21"> Axios </div>
+                  <div className="button-21"> MUI </div>
                 </div>
 
                 <div className="project-heading-inside"> FlexFit</div>
@@ -112,7 +174,7 @@ function Projects() {
                 </div>
               </div>
             </div>
-            <hr class="gradient"></hr>
+
             <div className="web-project" data-aos="fade-left">
               <div className="project-content">
                 <div className="project-content">
@@ -130,7 +192,7 @@ function Projects() {
                       <div className="links-1">
                         <a
                           href="https://adaptive-carnelian-lobe.glitch.me/"
-                          style={{ color: "white", textDecoration: "none" }}
+                          style={{ color: "white", textDecoration: "underline" }}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -138,7 +200,7 @@ function Projects() {
                         </a>
                         <a
                           href="https://github.com/yaashnaa/StudyCenter.git"
-                          style={{ color: "white", textDecoration: "none" }}
+                          style={{ color: "white", textDecoration: "underline" }}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -175,7 +237,7 @@ function Projects() {
                   <div className="links-1">
                     <a
                       href="https://adaptive-carnelian-lobe.glitch.me/"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -183,7 +245,7 @@ function Projects() {
                     </a>
                     <a
                       href="https://github.com/yaashnaa/StudyCenter.git"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -202,7 +264,7 @@ function Projects() {
                   <div className="links-1">
                     <a
                       href="/"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -210,7 +272,7 @@ function Projects() {
                     </a>
                     <a
                       href="https://github.com/yaashnaa/Bloghub.git"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -253,7 +315,7 @@ function Projects() {
                     <div className="links-1">
                       <a
                         href="https://sixth-field-fascinator.glitch.me/"
-                        style={{ color: "white", textDecoration: "none" }}
+                        style={{ color: "white", textDecoration: "underline" }}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -261,7 +323,7 @@ function Projects() {
                       </a>
                       <a
                         href="https://github.com/yaashnaa/MusicConnect.git"
-                        style={{ color: "white", textDecoration: "none" }}
+                        style={{ color: "white", textDecoration: "underline" }}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -305,7 +367,7 @@ function Projects() {
                   <div className="links-1">
                     <a
                       href="https://sixth-field-fascinator.glitch.me/"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -313,7 +375,7 @@ function Projects() {
                     </a>
                     <a
                       href="https://github.com/yaashnaa/MusicConnect.git"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -330,13 +392,13 @@ function Projects() {
                   <div className="links-1">
                     <a
                       href="https://digi-draw-live.glitch.me/"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                     >
                       Go to website
                     </a>
                     <a
                       href="https://github.com/yaashnaa/DigiDraw.git"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -384,7 +446,7 @@ function Projects() {
                     <div className="links-1">
                       <a
                         href="https://yaashnaa.github.io/midterm-liveweb-final/"
-                        style={{ color: "white", textDecoration: "none" }}
+                        style={{ color: "white", textDecoration: "underline" }}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -392,7 +454,7 @@ function Projects() {
                       </a>
                       <a
                         href="https://github.com/yaashnaa/Respiro.git"
-                        style={{ color: "white", textDecoration: "none" }}
+                        style={{ color: "white", textDecoration: "underline" }}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -431,7 +493,7 @@ function Projects() {
                   <div className="links-1">
                     <a
                       href="https://yaashnaa.github.io/midterm-liveweb-final/"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -439,7 +501,7 @@ function Projects() {
                     </a>
                     <a
                       href="https://github.com/yaashnaa/Respiro.git"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "white", textDecoration: "underline" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -455,7 +517,7 @@ function Projects() {
                 <div className="image-hover">
                   <a
                     href="https://study-flow-33bff.web.app/"
-                    style={{ color: "white", textDecoration: "none" }}
+                    style={{ color: "white", textDecoration: "underline" }}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -494,7 +556,7 @@ function Projects() {
                 <div className="links-1">
                   <a
                     href="https://docs.google.com/document/d/1dKotCAPhdJb-Hb3oFyErQZe2LNPbyDZSzRdlkAOgW5w/edit?usp=sharing"
-                    style={{ color: "white", textDecoration: "none" }}
+                    style={{ color: "white", textDecoration: "underline" }}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -518,22 +580,22 @@ function Projects() {
           </div>
           <div className="creative-project" data-aos="fade-right">
             <div className="project-content">
-            <div className="project-img-mobile">
-              <img src={Performance} />
-              <div className="image-hover">
-                {" "}
-                <div className="links-1">
-                  <a
-                    href="https://drive.google.com/drive/folders/1vtF-D3IE8SWd9t0jLkbh7IBlBT2qnbTQ?usp=sharing"
-                    style={{ color: "white", textDecoration: "none" }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Go to documentation
-                  </a>
+              <div className="project-img-mobile">
+                <img src={Performance} />
+                <div className="image-hover">
+                  {" "}
+                  <div className="links-1">
+                    <a
+                      href="https://drive.google.com/drive/folders/1vtF-D3IE8SWd9t0jLkbh7IBlBT2qnbTQ?usp=sharing"
+                      style={{ color: "white", textDecoration: "underline" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Go to documentation
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
               <div className="project-heading-inside">
                 {" "}
                 Interactive Motion Performance
@@ -555,7 +617,7 @@ function Projects() {
                 <div className="links-1">
                   <a
                     href="https://drive.google.com/drive/folders/1vtF-D3IE8SWd9t0jLkbh7IBlBT2qnbTQ?usp=sharing"
-                    style={{ color: "white", textDecoration: "none" }}
+                    style={{ color: "white", textDecoration: "underline" }}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -573,7 +635,7 @@ function Projects() {
                 <div className="links-1">
                   <a
                     href="https://yaashnaa.github.io/Submarine-Adventure/"
-                    style={{ color: "white", textDecoration: "none" }}
+                    style={{ color: "white", textDecoration: "underline" }}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

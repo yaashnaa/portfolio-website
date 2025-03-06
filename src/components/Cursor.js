@@ -24,6 +24,7 @@ const CustomCursor = () => {
         backgroundColor: "pink",
         scaleX: controls.scaleX,
         scaleY: controls.scaleY,
+        zIndex: 999999,
       }}
     />
   );

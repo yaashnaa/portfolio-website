@@ -56,10 +56,11 @@ function App() {
       <Navbar />
 
       <NewHeroBanner />
-      <MiniAboutMe />
+
 
       {/* <Skills /> */}
       <Projects />
+      <MiniAboutMe />
 
       <ContactForm />
     </div>

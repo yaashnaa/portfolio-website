@@ -231,7 +231,10 @@ cursor {
   z-index: 9999999999999;
 }
 /* Small Devices (max-width: 480px) */
-@media screen and (max-width: 482px) {
+@media screen and (max-width: 480px) {
+  .navbar{
+    background-color: yellowgreen;
+  }
   .main-heading-title {
     font-size: 4rem;
   }
@@ -300,10 +303,18 @@ cursor {
   h2 {
     font-size: 2.2rem;
   }
+  #container{
+    height: 100vh;
+  }
+
+  .submit{
+    gap: 5rem;
+  }
 }
 
 /* Extra Small Devices (max-width: 420px) */
 @media screen and (max-width: 420px) {
+  
   h1 {
     font-size: 18px;
   }
@@ -376,6 +387,7 @@ cursor {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 481px) {
+  
 .about-me{
     font-size: 1.4rem;
 }
