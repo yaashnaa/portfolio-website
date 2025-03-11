@@ -54,14 +54,9 @@ function App() {
         ]}
       />
       <Navbar />
-
       <NewHeroBanner />
-
-
-      {/* <Skills /> */}
       <Projects />
       <MiniAboutMe />
-
       <ContactForm />
     </div>
   );

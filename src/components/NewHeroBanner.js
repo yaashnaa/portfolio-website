@@ -66,20 +66,6 @@ const NewHeroBanner = () => {
                   I'm a web developer and designer based in NYC
                 </h1>
       
-      
-                {/* </div> */}
-                {/* <div class="sign">
-                  {" "}
-                  <span style={{ color: "black" }}>I'm a&nbsp;</span>
-                  <span class="fast-flicker"> T</span>E
-                  <span class="flicker">C</span>H &nbsp;{" "}
-                  <span style={{ color: "black" }}> and </span>
-                </div>
-                <div class="sign">
-                  <span class="fast-flicker">A</span>R
-                  <span class="flicker">T</span>&nbsp;{" "}
-                  <span style={{ color: "black" }}>student</span>
-                </div> */}
               </div>
             </div>
           </div>

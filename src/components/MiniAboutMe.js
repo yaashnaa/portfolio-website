@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import AboutMe from "../public/assets/aboutme.jpg";
-import simpleParallax from "simple-parallax-js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -30,7 +29,7 @@ const MiniAboutMe = () => {
       >
         <div className="card" data-aos="fade-right">
           {" "}
-          <img src={AboutMe} className="circular-img" />{" "}
+          <img src={AboutMe} className="circular-img" loading="lazy"/>{" "}
           <span className="top"></span>
           <span className="right"></span>
           <span className="bottom"></span>

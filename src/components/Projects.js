@@ -68,11 +68,11 @@ function Projects() {
               <div className="project-content">
                 <div className="project-content">
                   <div className="tech" id="tech">
-                    <div className="button-21"> GenAI </div>
+                    <div className="button-21"> Node.js </div>
                     <div className="button-21"> React </div>
                     <div className="button-21"> Python </div>
                     <div className="button-21"> Axios </div>
-                    <div className="button-21"> Machine Learning</div>
+                    <div className="button-21"> TensorFlow</div>
         
                   </div>
                   <div className="project-img-mobile">
@@ -92,11 +92,11 @@ function Projects() {
                     </div>
                   </div>
                   <div className="tech-mobile">
-                  <div className="button-21"> GenAI </div>
+                  <div className="button-21"> Node.js </div>
                     <div className="button-21"> React </div>
                     <div className="button-21"> Python </div>
                     <div className="button-21"> Axios </div>
-                    <div className="button-21"> Machine Learning</div>
+                    <div className="button-21"> TensorFlow</div>
                     
                   </div>
                   <div className="project-heading-inside"> ZenPose (HACKNYU 2025 WInner)</div>
@@ -154,7 +154,7 @@ function Projects() {
                 </div>
               </div>
               <div className="project-content">
-                <div className="tech">
+                <div className="tech" id="tech">
                   <div className="button-21"> React </div>
                   <div className="button-21"> Firebase </div>
                   <div className="button-21"> Rapid API </div>
@@ -181,7 +181,7 @@ function Projects() {
                   <div className="tech" id="tech">
                     <div className="button-21"> Express </div>
                     <div className="button-21"> EJS </div>
-                    <div className="button-21"> Nedb </div>
+                    <div className="button-21"> Node.js </div>
                     <div className="button-21"> WebRTC </div>
                     <div className="button-21"> Peer.js</div>
                   </div>
@@ -212,7 +212,7 @@ function Projects() {
                   <div className="tech-mobile">
                     <div className="button-21"> Express </div>
                     <div className="button-21"> EJS </div>
-                    <div className="button-21"> Nedb </div>
+                    <div className="button-21"> Node.js  </div>
                     <div className="button-21"> WebRTC </div>
                     <div className="button-21"> Peer.js</div>
                   </div>
@@ -283,12 +283,14 @@ function Projects() {
               </div>
               <div className="project-content">
                 <div className="project-content">
-                  <div className="tech">
+                  <div className="tech" id="tech">
+                 
                     <div className="button-21"> Express </div>
                     <div className="button-21"> EJS </div>
                     <div className="button-21"> Bcrypt </div>
                     <div className="button-21"> Passport.js </div>
                     <div className="button-21"> MongoDB</div>
+                    <div className="button-21">  Node.js </div>
                   </div>
 
                   <div className="project-heading-inside"> BlogHub</div>
@@ -340,7 +342,7 @@ function Projects() {
                   <div className="button-21"> SimplePeer</div>
                   <div className="button-21"> CodeMirror</div>
                 </div>
-                <div className="tech">
+                <div className="tech" id="tech">
                   <div className="button-21"> React </div>
                   <div className="button-21"> Express </div>
                   <div className="button-21"> Socket.io </div>
@@ -408,12 +410,13 @@ function Projects() {
                 </div>
               </div>
               <div className="project-content">
-                <div className="tech">
+                <div className="tech" id="tech">
                   <div className="button-21"> Express </div>
                   <div className="button-21"> Socket.io </div>
                   <div className="button-21"> WebRTC </div>
                   <div className="button-21"> EJS</div>
                   <div className="button-21"> Morgan</div>
+                  <div className="button-21">  Node.js </div>
                 </div>
                 <div className="project-heading-inside"> DigiDraw</div>
 
@@ -526,7 +529,7 @@ function Projects() {
                 </div>
               </div>
               <div className="project-content">
-                <div className="tech">
+                <div className="tech" id="tech">
                   <div className="button-21"> React </div>
                   <div className="button-21"> API </div>
                   <div className="button-21"> Axios </div>

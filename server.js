@@ -7,16 +7,11 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.post('/api/send-email', (req, res) => {
   const { name, email, message } = req.body;
-
-  // Create a nodemailer transporter
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
