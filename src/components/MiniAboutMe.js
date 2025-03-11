@@ -1,3 +1,6 @@
+
+//removed uncessary imports and added the necessary imports
+//removed the unnecessary comments
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -9,13 +12,10 @@ import {
   faCalendarDays,
   faBuildingColumns,
 } from "@fortawesome/free-solid-svg-icons";
+
 const MiniAboutMe = () => {
   useEffect(() => {
     AOS.init();
-    // var image = document.getElementsByClassName("circular-img");
-    // new simpleParallax(image, {
-    //   overflow: true,
-    // });
   }, []);
 
   return (
@@ -29,7 +29,7 @@ const MiniAboutMe = () => {
       >
         <div className="card" data-aos="fade-right">
           {" "}
-          <img src={AboutMe} className="circular-img" loading="lazy"/>{" "}
+          <img src={AboutMe} className="circular-img" loading="lazy" alt="Abut me"/>{" "}
           <span className="top"></span>
           <span className="right"></span>
           <span className="bottom"></span>

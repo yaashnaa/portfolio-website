@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Logo from "../public/assets/logo.png";
@@ -15,27 +15,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [opacity, setOpacity] = useState(1); // Opacity state
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // Toggle the mobile menu
+  const toggleMenu = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, []);
 
-  const closeMenu = () => {
+  // Close the mobile menu
+  const closeMenu = useCallback(() => {
     setIsOpen(false);
-  };
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     // Adjust opacity: fully visible at top, fades as you scroll down
-  //     // const newOpacity = Math.max(1 - window.scrollY / 400, 0.5); // Stops at 0.5 opacity
-  //     // setOpacity(newOpacity);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+  }, []);
 
   return (
     <>
