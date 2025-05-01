@@ -454,7 +454,10 @@ h1 {
 } */
 .projects-web {
   margin: 2rem auto; /* Adjust margin for better centering */
-  width: 70%;
+  width: 80%;
+  display: flex;
+  gap: 11rem;
+  flex-direction: column; /* Stack the projects vertically */
 }
 
 .web-flex {
@@ -489,8 +492,8 @@ h1 {
 }
 
 .project-img {
-  flex: 1;
-  /* width: 9rem; */
+  /* flex: 1; */
+  width: 33%;
   border: #b1b1b1 2px solid;
   padding: 20px;
   box-shadow: rgba(217, 164, 161, 0.8) 0px 1px 11px,
@@ -517,14 +520,13 @@ h1 {
   color: white;
   margin-bottom: 0.6rem;
 }
-.sent{
-  
-} 
+
 .project-content {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  width: 46%;
   padding: 2rem;
+
 }
 
 .project-heading {
@@ -1074,14 +1076,18 @@ textarea {
 }
 
 .aboutme-main {
-  margin-top: 5rem;
+  margin-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 70vw;
-  margin: auto;
+  margin: auto; 
+  
 }
-
+.aboutme-main{
+  margin-top: 15rem;
+  margin-bottom: 20rem;
+}
 /* .circular-img {
   width: 400px;
 } */
@@ -1388,7 +1394,6 @@ h3::before {
   border: var(--primary) 2px solid;
   background-size: calc(100% + 20px) calc(100% + 20px);
   border-radius: 100px;
-  border-width: 1;
   font-weight: 900;
   box-shadow: none;
   box-sizing: border-box;
@@ -1426,8 +1431,9 @@ h3::before {
 }
 .tech {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   gap: 2rem;
+  flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
@@ -1480,7 +1486,7 @@ h3::before {
 
 .icon-info {
   font-family: "Alegreya Sans SC", sans-serif;
-  font-size: 2rem;
+  font-size: 1.9rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -1503,4 +1509,3 @@ h3::before {
 .icon-am:hover{
   color: white;
 }
-

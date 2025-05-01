@@ -1,4 +1,3 @@
-
 //removed uncessary imports and added the necessary imports
 //removed the unnecessary comments
 import React, { useEffect } from "react";
@@ -12,6 +11,13 @@ import {
   faCalendarDays,
   faBuildingColumns,
 } from "@fortawesome/free-solid-svg-icons";
+import { faFile } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import styles from "../css/aboutme.module.css";
 
 const MiniAboutMe = () => {
   useEffect(() => {
@@ -25,11 +31,16 @@ const MiniAboutMe = () => {
         data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="2000"
-        data-aos-delay="300"
+        // data-aos-delay="300"
       >
-        <div className="card" data-aos="fade-right">
+        <div className="card">
           {" "}
-          <img src={AboutMe} className="circular-img" loading="lazy" alt="Abut me"/>{" "}
+          <img
+            src={AboutMe}
+            className="circular-img"
+            loading="lazy"
+            alt="Abut me"
+          />{" "}
           <span className="top"></span>
           <span className="right"></span>
           <span className="bottom"></span>
@@ -41,7 +52,7 @@ const MiniAboutMe = () => {
             <h2>So, who am I really?</h2>
             <div className="overlay"></div>
           </div>
-          <div className="about-me" data-aos="fade-left">
+          <div className="about-me">
             I've always loved creating, whether it was art or poetry or
             movement. I think ultimately also those passions cultivated in me
             pursuing something that lets me combine technology and art and
@@ -59,7 +70,7 @@ const MiniAboutMe = () => {
             <div className="icon-info">
               <FontAwesomeIcon
                 icon={faEnvelope}
-                size="1x"
+                size="xl"
                 className="icon-am"
               />{" "}
               yaashna.gupta@nyu.edu
@@ -67,23 +78,64 @@ const MiniAboutMe = () => {
             <div className="icon-info">
               <FontAwesomeIcon
                 icon={faBuildingColumns}
-                size="1x"
+                size="xl"
                 className="icon-am"
               />{" "}
               New York University{" "}
             </div>
             <div className="icon-info">
-              <FontAwesomeIcon
-                icon={faCalendarDays}
-                size="1x"
-                className="icon-am"
-              />{" "}
-              05.12.2002{" "}
+              <div className={styles.icons}>
+                <a
+                  href="https://www.linkedin.com/in/yaashna-gupta-a78473237"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    size="2xl"
+                    style={{ color: "#ffffff" }}
+                  />
+                </a>
+
+                <a
+                  href="https://github.com/yg2348"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    size="xl"
+                    style={{ color: "#ffffff" }}
+                  />
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/19fdjmJTiLdouylxjFgCNV1AmufeNcoRf/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faFile}
+                    size="xl"
+                    style={{ color: "#ffffff" }}
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/_.yaashna._/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    size="xl"
+                    style={{ color: "#ffffff" }}
+                  />
+                </a>
+              </div>
             </div>
             <div className="icon-info">
               <FontAwesomeIcon
                 icon={faLocationDot}
-                size="1x"
+                size="xl"
                 className="icon-am"
               />{" "}
               New York{" "}

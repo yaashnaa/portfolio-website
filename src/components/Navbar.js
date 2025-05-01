@@ -13,7 +13,7 @@ const Navbar = () => {
   }, []);
 
   const [isOpen, setIsOpen] = useState(false);
-  const [opacity, setOpacity] = useState(1); // Opacity state
+
 
   // Toggle the mobile menu
   const toggleMenu = useCallback(() => {
@@ -30,7 +30,6 @@ const Navbar = () => {
       <div 
         className="navbar" 
         data-aos="fade-down" 
-        style={{ backgroundColor: `rgba(0, 0, 0, ${opacity})`, transition: "opacity 0.3s ease-in-out" }}
       >
         <div className="navbar-left">
           <div className="nav-btn">

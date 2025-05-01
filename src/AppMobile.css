@@ -232,9 +232,7 @@ cursor {
 }
 /* Small Devices (max-width: 480px) */
 @media screen and (max-width: 480px) {
-  .navbar{
-    background-color: yellowgreen;
-  }
+
   .main-heading-title {
     font-size: 4rem;
   }
@@ -514,18 +512,19 @@ textarea {
     height: 50%;
   }
   .contact-form {
-    height: 60vh;
+    height: 100vh;
     width: 80vw;
   }
   .aboutme-content{
     gap: 0;
   }
   h2{
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .icon-info{
     font-size: 1.4rem;
 }
+
   /* .main-div {
     height: 70vh;
   } */

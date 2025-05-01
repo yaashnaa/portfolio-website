@@ -4,12 +4,12 @@ require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-
+const compression = require('compression');
 const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use(compression());
 app.post('/api/send-email', (req, res) => {
   const { name, email, message } = req.body;
   const transporter = nodemailer.createTransport({
@@ -19,7 +19,10 @@ app.post('/api/send-email', (req, res) => {
       pass: process.env.EMAIL_PASS,
     },
   });
-
+  app.use(express.static('public', {
+    maxAge: '30d'
+  }));
+  
   // Set up email options
   const mailOptions = {
     from:process.env.EMAIL_USER,
