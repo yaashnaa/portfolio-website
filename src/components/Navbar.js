@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 import Logo from "../public/assets/logo.png";
 import { Link } from "react-scroll";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {

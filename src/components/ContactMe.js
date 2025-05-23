@@ -1,14 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import Avatar from "../public/assets/avatar.gif";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFile } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser";
-import {
-  faLinkedin,
-  faGithub,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
 import styles from "../css/contactForm.module.css";
 
 const ContactForm = () => {

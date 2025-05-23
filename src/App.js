@@ -6,8 +6,7 @@ import Navbar from "./components/Navbar";
 import NewHeroBanner from "./components/NewHeroBanner";
 import Projects from "./components/Projects";
 import AnimatedCursor from "react-animated-cursor";
-// index.js or App.js
-import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import CustomCursor from "./components/Cursor";
 
 function App() {
