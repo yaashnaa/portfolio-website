@@ -10,15 +10,15 @@ import MoonLamp from "../public/assets/moonlamp.png";
 import Performance from "../public/assets/performance.png";
 import zenPose from "../public/assets/zenPose.png";
 import Game from "../public/assets/game.png";
+import ViraMobileImage from "../public/assets/vira.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Reusable project card component for both web and creative projects.
 const ProjectCard = React.memo(({ project, isWeb }) => {
   return (
-    <div className={isWeb ? "web-project" : "creative-project"} data-aos={project.aos}>
+    <div className={isWeb ? "web-project" : "creative-project"} data-aos={project.aos}   data-aos-once="true">
       {isWeb ? (
         <>
           <div className="project-content">
@@ -124,17 +124,36 @@ function Projects() {
         aos: "fade-left",
         title: "ZenPose (HACKNYU 2025 Winner)",
         tech: ["Node.js", "React", "Python", "Axios", "TensorFlow"],
-        mobileImage: StudyHub,
+        mobileImage: zenPose,
         desktopImage: zenPose,
         hoverLinks: [
           {
             text: "Github repository",
             url: "https://github.com/yaashnaa/hackathon-2025",
           },
+
         ],
         description:
           "Developed a web app that uses real-time pose detection to provide instant feedback for injury prevention. Improved detection accuracy by implementing relative pose estimation and integrated Gemini API for personalized corrections. Built a responsive UI with React enhancing user experience and engagement.",
       },
+      {
+        id: 9,
+        aos: "fade-left",
+        title: "Vira (Launching June 5)",
+        tech: ["React Native", "Firebase", "Expo", "Styled Components", "Jest"],
+        mobileImage: ViraMobileImage, 
+        desktopImage: ViraMobileImage, 
+        hoverLinks: [
+          {
+            text: "Github repository",
+            url: "https://github.com/yaashnaa/Vira/tree/main", 
+          }
+        ],
+
+        description:
+          "Vira is a gentle, research-backed wellness app designed for users navigating depression, anxiety, and eating disorder recovery. Unlike traditional wellness apps that rely on rigid tracking, Vira prioritizes emotional safety, autonomy, and self-compassion. Built using behavioral psychology and ethical UX design principles, Vira adapts to the user—not the other way around. Public beta launches on TestFlight June 5.",
+      }
+,      
       {
         id: 7,
         aos: "fade-left",
@@ -160,6 +179,7 @@ function Projects() {
         aos: "fade-right",
         title: "FlexFit",
         tech: ["React", "Firebase", "Rapid API", "Axios", "MUI"],
+        mobileImage: FlexFit,
         desktopImage: FlexFit,
         hoverLinks: [
           {
@@ -199,6 +219,7 @@ function Projects() {
         aos: "fade-right",
         title: "BlogHub",
         tech: ["Express", "EJS", "Bcrypt", "Passport.js", "MongoDB", "Node.js"],
+        mobileImage: Bloghub,
         desktopImage: Bloghub,
         hoverLinks: [
           {
@@ -238,6 +259,7 @@ function Projects() {
         aos: "fade-right",
         title: "DigiDraw",
         tech: ["Express", "Socket.io", "WebRTC", "EJS", "Morgan", "Node.js"],
+        mobileImage: Draw,
         desktopImage: Draw,
         hoverLinks: [
           {
@@ -258,6 +280,7 @@ function Projects() {
         aos: "fade-right",
         title: "StudyFlow",
         tech: ["React", "API", "Axios", "Node.js"],
+        mobileImage: StudyTimer,
         desktopImage: StudyTimer,
         hoverLinks: [
           {
@@ -279,6 +302,7 @@ function Projects() {
         aos: "fade-right",
         title: "3D Printed Moon Lamp",
         desktopImage: MoonLamp,
+        mobileImage: MoonLamp,
         hoverLinks: [
           {
             text: "Go to documentation",
@@ -293,6 +317,7 @@ function Projects() {
         aos: "fade-right",
         title: "Interactive Motion Performance",
         desktopImage: Performance,
+        mobileImage: Performance,
         hoverLinks: [
           {
             text: "Go to documentation",
@@ -307,6 +332,7 @@ function Projects() {
         aos: "fade-right",
         title: "Submarine Adventure Game",
         desktopImage: Game,
+        mobileImage: Game,
         hoverLinks: [
           {
             text: "Go to website",
@@ -324,6 +350,7 @@ function Projects() {
     <>
       <div
         className="project-heading"
+        id="project-heading"
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
       >
@@ -348,14 +375,14 @@ function Projects() {
         </div>
       </div>
       {currentSection === "webdev" && (
-        <div className="projects-web">
+        <div className="projects-web" key="webdev">
           {webProjects.map((project) => (
             <ProjectCard key={project.id} project={project} isWeb={true} />
           ))}
         </div>
       )}
       {currentSection === "creative" && (
-        <div className="creative-flex">
+        <div className="creative-flex" key="creative">
           {creativeProjects.map((project) => (
             <ProjectCard key={project.id} project={project} isWeb={false} />
           ))}

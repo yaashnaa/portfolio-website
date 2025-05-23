@@ -10,7 +10,7 @@ const NewHeroBanner = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(false);
   const h1Ref = useRef(null);
 
-  console.log("Component Mounted");
+
 
   // Update the text shadow based on mouse position over the heading.
   const handleMouseMove = useCallback((e) => {
@@ -26,32 +26,33 @@ const NewHeroBanner = () => {
     }
   }, []);
   useEffect(() => {
-    console.log("AOS Initialized");
-    AOS.init();
+    import("aos").then((AOS) => {
+      AOS.init();
+    });
+    import("aos/dist/aos.css");
+    import("animate.css");
   }, []);
+  
   useEffect(() => {
-    console.log("Scroll Event Listener Added");
+    let ticking = false;
+  
     const handleScroll = () => {
-      console.log("Scroll Event Triggered");
-      const scrollPosition = window.scrollY;
-      if (scrollPosition > 100) {
-        setIsScrollingUp(true);
-        setShouldFadeOut(true);
-        setShouldRotateOut(true);
-      } else {
-        setIsScrollingUp(false);
-        setShouldFadeOut(false);
-        setShouldRotateOut(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollPosition = window.scrollY;
+          setIsScrollingUp(scrollPosition > 100);
+          setShouldFadeOut(scrollPosition > 100);
+          setShouldRotateOut(scrollPosition > 100);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-
+  
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      console.log("Scroll Event Listener Removed");
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
   return (
     <>
       <div className="main-div">
@@ -66,7 +67,7 @@ const NewHeroBanner = () => {
             <div className="main-heading">
               <div>
            
-                <div className="main-heading-title" ata-aos="zoom-in-right">
+                <div className="main-heading-title" data-aos="zoom-in-right">
         
                   Hi, I'm Yaashna!
                 </div>
@@ -79,13 +80,9 @@ const NewHeroBanner = () => {
         </div>
 
         <div
-          className={`img-div ${
-            shouldRotateOut
-              ? " animate__animated animate__rotateOutUpRight"
-              : ""
-          }`}
+          className={`img-div`}
         >
-          <img src={New} loading="lazy" data-aos="flip-up" />
+          <img src={New} loading="lazy" data-aos="fade-left" alt="Banner" />
           <div className="background-div"> </div>
         </div>
 

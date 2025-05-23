@@ -158,12 +158,6 @@ html, body {
     box-shadow: rgba(217, 164, 161, 0.8) 0px 14px 28px,
       rgba(217, 164, 161, 0.5) 0px 10px 10px;
   }
-  .project-img {
-    width: 50vw;
-  }
-  #project-img {
-    display: none;
-  }
   .project-desc {
     font-size: 1.3rem;
     text-align: center;
@@ -232,7 +226,15 @@ cursor {
 }
 /* Small Devices (max-width: 480px) */
 @media screen and (max-width: 480px) {
-
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    font-size: 1rem;
+  }
+  .avatar-div {
+    display: none;
+  }
   .main-heading-title {
     font-size: 4rem;
   }
@@ -282,16 +284,19 @@ cursor {
   }
   .projects-web {
     width: 90vw;
+    gap: 1rem;
   }
   .project-img {
-    padding: 10px;
+    display: none;
   }
   .project-content {
     padding: 0;
+    width: auto;
   }
   .contact-form {
     height: 60vh;
     width: 80vw;
+
   }
   .form-h2 {
     position: absolute;
@@ -299,10 +304,14 @@ cursor {
     width: 100%;
   }
   h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   #container{
     height: 100vh;
+
+  }
+  .form-h2{
+    width: 100%;
   }
 
   .submit{
@@ -461,8 +470,8 @@ textarea {
     text-align: center; 
     margin:auto
   }
-  .project-img {
-    padding: 10px;
+  .project-img-mobile {
+    display: none;
   }
   .project-content {
     padding: 0;
@@ -519,7 +528,7 @@ textarea {
     gap: 0;
   }
   h2{
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
   .icon-info{
     font-size: 1.4rem;
@@ -532,6 +541,9 @@ textarea {
 
 /* Extra Large Devices (min-width: 1200px) */
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .container {
+    background-color: red;
+  }
   .main-heading-title {
     max-width: 50vw;
     font-size: 7rem;
@@ -543,7 +555,7 @@ textarea {
     height: 40%;
   }
   h1{
-    font-size: 3rem;
+    font-size:2.7rem;
   }
   .about-me {
     width: 50vw;

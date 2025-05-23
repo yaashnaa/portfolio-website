@@ -44,7 +44,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
     "extends": [
@@ -68,7 +69,9 @@
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "autoprefixer": "^10.4.16",
     "css-minimizer-webpack-plugin": "^5.0.1",
-    "postcss": "^8.4.32"
+    "postcss": "^8.4.32",
+    "source-map-explorer": "^2.5.3",
+    "webpack-bundle-analyzer": "^4.10.2"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server.js",
